@@ -1,6 +1,6 @@
 <template>
   <NuxtLoadingIndicator
-    color="#f00"
+    color="#FF8637"
     :height="2"
     :throttle="0"
   />
@@ -10,7 +10,10 @@
 </template>
 
 <script setup>
+const { t } = useI18n()
+const templateTitle = ref(t('seo.pageTitle.template'))
+
 useHead({
-  titleTemplate: '%s - Site Title'
+  titleTemplate: `%s - ${templateTitle.value}`
 })
 </script>

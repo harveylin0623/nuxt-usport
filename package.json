@@ -28,8 +28,11 @@
     "axios": "^1.6.5",
     "crypto-js": "^4.2.0",
     "dayjs": "^1.11.10",
+    "lodash": "^4.17.21",
+    "nuxt-simple-robots": "^4.0.0-rc.14",
     "pinia": "^2.1.7",
     "swiper": "^11.0.5",
-    "vee-validate": "^4.12.5"
+    "vee-validate": "^4.12.5",
+    "vue-dompurify-html": "^5.0.1"
   }
 }

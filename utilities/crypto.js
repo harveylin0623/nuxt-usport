@@ -13,6 +13,6 @@ export const wmAes = (input) => {
 export const wmSign = (body) => {
   const payload = CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(JSON.stringify(body)))
   const signature = CryptoJS.enc.Base64.stringify(CryptoJS.HmacSHA256(payload, sign_key))
-  const sign = `${payload}.${signature}`
+  const sign = payload + '.' + signature
   return sign
 }

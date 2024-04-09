@@ -4,10 +4,11 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      meta: [
+      link: [
         {
-          name: 'description',
-          content: ''
+          rel: 'shortcut icon',
+          type: 'image/png',
+          href: '/favicon.png'
         }
       ]
     }
@@ -34,12 +35,14 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
     '@nuxtjs/i18n',
-    '@element-plus/nuxt'
+    '@element-plus/nuxt',
+    'nuxt-simple-robots'
   ],
   css: [
     'swiper/css',
-    'swiper/css/pagination',
+    'swiper/css/effect-fade',
     'swiper/css/navigation',
+    'swiper/css/pagination',
     '@/assets/scss/tailwind.scss',
     '@/assets/scss/global.scss'
   ],
@@ -60,5 +63,8 @@ export default defineNuxtConfig({
     //   cookieKey: 'i18n',
     //   fallbackLocale: 'zh-tw'
     // }
+  },
+  robots: {
+    disallow: [process.env.CURRENT_MODE === 'dev' ? '/' : '']
   }
 })

@@ -1,12 +1,14 @@
 import axios from 'axios'
-import { useCommonStore } from '@/stores/common.js'
 
 export const useAxios = (options) => {
-  const commonStore = useCommonStore()
-  console.log(commonStore)
-
   const customAxios = axios.create({
-    baseURL: `${process.env.BASE_API_URL}/api`
+    baseURL: `${process.env.BASE_API_URL}/api`,
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept-Language': 'zh-TW',
+      'app-id': process.env.APP_ID,
+      'device-uuid': 'u-sport'
+    }
   })
 
   customAxios.interceptors.request.use(function (config) {

@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --header-pc-h: 81px; // header在pc的高度
+    --header-mobile-h: 62.86px; // header在mobile的高度
+    --content-pc-padding-y: 60px; // 頁面內容的上下padding
+    --color-primary-1: #FF8637;
+  }
+
   body {
     font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
     @apply text-black;
@@ -23,12 +30,20 @@
   h4 {
     @apply text-lg font-medium;
   }
+
+  span, a {
+    @apply inline-block;
+  }
+
 }
 
 @layer components {
-  
-}
+  .btn {
+    @apply inline-block px-5 py-2 border border-solid rounded-full text-base transition-all;
+  }
 
-@layer utilities {
+  .btn-outline-primary {
+    @apply bg-white border-primary-1 text-primary-1 hover:bg-primary-1 hover:text-white;
+  }
 
 }
