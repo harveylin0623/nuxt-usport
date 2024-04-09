@@ -1,0 +1,18 @@
+{
+  "validate": {
+    "require": "必填",
+    "email": "電子信箱格式有誤",
+    "confirm": "確認資料有誤"
+  },
+  "seo": {
+    "pageTitle": {
+      "news": "最新消息",
+      "faq": "常見問題",
+      "buyer_apply": "業者申請"
+    },
+    "metaContent": {
+      
+    }
+  },
+  "logoAlt": "網站logo"
+}
